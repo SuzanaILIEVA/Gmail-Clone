@@ -1,0 +1,363 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+.icon, .modal-inner #close-btn, section main .top .right i, section main .top .left i, section main .top .left .check i, section nav .bottom div i, header .right i, header .middle form i, header .left .menu {
+  padding: 8px 12px;
+  border-radius: 50%;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.icon:hover, .modal-inner #close-btn:hover, section main .top .right i:hover, section main .top .left i:hover, section nav .bottom div i:hover, header .right i:hover, header .middle form i:hover, header .left .menu:hover {
+  background: rgb(215, 222, 235);
+}
+
+.flex, section main .mails-area .mail .right, section main .mails-area .mail .left, header .right, header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bgcolor: rgb(215, 227, 240);
+  --mailarea: #f2f6fc;
+}
+
+body {
+  font-family: "Roboto";
+  background: #f6f8fc;
+}
+
+header {
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  font-size: 21px;
+}
+header .left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 10px;
+}
+header .left img,
+header .left span {
+  cursor: pointer;
+}
+header .left .menu {
+  cursor: pointer;
+  margin-right: 20px;
+  font-size: 30px;
+}
+header .middle form {
+  background: #e9ecef;
+  padding: 6px 9px;
+  gap: 10px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+header .middle form i {
+  font-size: 15px;
+}
+header .middle form input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 15px;
+}
+header .right {
+  gap: 10px;
+}
+header .right img {
+  height: 30px;
+  border-radius: 50%;
+}
+section {
+  display: flex;
+  gap: 20px;
+  /*navigasyon alani*/
+  /*maıller alanı*/
+  /*aside alani*/
+}
+section nav {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 12px;
+  font-size: medium;
+}
+section nav .create-mail {
+  background: #d0ebff;
+  border-radius: 15px;
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+section nav .create-mail:hover {
+  box-shadow: 2px 2px 10px gray;
+  transition: all 0.4s;
+}
+section nav .create-mail a {
+  padding: 8px;
+}
+section nav .middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  font-size: smaller;
+  white-space: nowrap;
+}
+section nav .middle .active {
+  font-weight: bold;
+  background: var(--bgcolor);
+  border-radius: 0 20px 20px 0;
+}
+section nav .middle a {
+  padding: 8px;
+  cursor: pointer;
+}
+section nav .middle a:hover {
+  background: var(--bgcolor);
+  border-radius: 0 20px 20px 0;
+}
+section nav .middle i, section nav .middle span {
+  pointer-events: none;
+}
+section nav .middle i {
+  margin-right: 5px;
+}
+section nav .bottom div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section .hide .create-mail span,
+section .hide .middle a span,
+section .hide .bottom div span {
+  display: none;
+}
+section main {
+  flex-grow: 1;
+  white-space: nowrap;
+}
+section main .top {
+  background: white;
+  border-radius: 10px 10px 0 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section main .top .left {
+  display: flex;
+  align-items: center;
+}
+section main .top .left .check {
+  padding: 10px 5px;
+  display: flex;
+  gap: 2px;
+  border-radius: 5px;
+}
+section main .top .left .check:hover {
+  background: var(--bgcolor);
+}
+section main .top .left .check input {
+  width: 15px;
+  height: 15px;
+}
+section main .top .left .check i {
+  font-size: 10px;
+}
+section main .top .left i {
+  font-size: 14px;
+}
+section main .top .right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: small;
+}
+section main .top .right i {
+  font-size: 12px;
+}
+section main .mails-area {
+  height: 100vh;
+  width: 100%;
+  background: #e9ecef;
+}
+section main .mails-area .mail {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  gap: 10px;
+  font-size: 14px;
+  border-bottom: 1px solid rgb(228, 224, 224);
+  padding: 2px 6px;
+  transition: box-shadow 0.3s;
+}
+section main .mails-area .mail:hover {
+  box-shadow: 0px 0px 7px gray;
+  background: #f8f9fa;
+  transition: box-shadow 0.4s;
+}
+section main .mails-area .mail .left {
+  justify-content: start;
+  gap: 5px;
+}
+section main .mails-area .mail .left #star {
+  color: rgb(178, 175, 175);
+}
+section main .mails-area .mail .left .check {
+  padding: 10px 10px;
+  display: flex;
+  gap: 2px;
+  border-radius: 5px;
+}
+section main .mails-area .mail .left .check input {
+  width: 13px;
+  height: 13px;
+}
+section main .mails-area .mail .left .check:hover {
+  background: var(--bgcolor);
+}
+section main .mails-area .mail .right {
+  justify-content: space-between;
+}
+section main .mails-area .mail .right .message-title {
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-start;
+}
+section main .mails-area .mail .right .message-desc {
+  display: flex;
+  justify-content: flex-start;
+}
+section main .mails-area .mail .right .message-date {
+  white-space: nowrap;
+}
+section main .mails-area .mail .right button {
+  background: none;
+  border: none;
+  font-size: 17px;
+  display: none;
+  padding: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+section main .mails-area .mail .right .message-date {
+  display: block;
+}
+section main .mails-area .mail:hover > .right .message-date {
+  display: none;
+}
+section main .mails-area .mail:hover > .right button {
+  display: block;
+}
+section aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+}
+section aside span {
+  width: 100%;
+  height: 2px;
+  background: #a4aab0;
+}
+section aside img {
+  width: 60px;
+}
+
+.star-active {
+  color: orange !important;
+}
+
+.active-category {
+  font-weight: bold;
+  background: var(--bgcolor);
+  border-radius: 0 20px 20px 0;
+}
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(30, 31, 31, 0.5411764706);
+  display: none;
+  place-items: center;
+}
+
+.modal-inner {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  width: 80%;
+  height: 90%;
+  border-radius: 10px;
+  padding: 40px;
+  position: relative;
+}
+.modal-inner #close-btn {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.modal-inner form {
+  display: flex;
+  flex-direction: column;
+}
+.modal-inner form label {
+  margin-top: 30px;
+}
+.modal-inner form input,
+.modal-inner form textarea {
+  border: 1px solid rgb(194, 188, 188);
+  border-radius: 4px;
+  margin-top: 10px;
+  padding: 8px;
+  outline: none;
+}
+.modal-inner form input:focus,
+.modal-inner form textarea:focus {
+  box-shadow: 2px 2px 10px rgb(154, 150, 150);
+}
+.modal-inner form textarea {
+  resize: vertical;
+  min-height: 150px;
+  max-height: 250px;
+  width: 100%;
+  padding: 8px;
+}
+.modal-inner #send-mail-btn {
+  position: absolute;
+  bottom: 30px;
+  left: 40px;
+  background: rgb(89, 131, 245);
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.4s;
+}
+.modal-inner #send-mail-btn:hover {
+  transform: scale(0.97);
+  background: rgb(61, 109, 243);
+  box-shadow: 0 0 20px rgb(61, 109, 243);
+  transition: all 0.4s;
+}/*# sourceMappingURL=style.css.map */

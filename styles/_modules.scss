@@ -1,0 +1,16 @@
+.icon {
+  padding: 8px 12px;
+  border-radius: 50%;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background: rgb(215, 222, 235);
+  }
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
